@@ -1,0 +1,31 @@
+.header_img{
+    width: 75px;
+}
+
+.container{
+    margin: 20px 8% 0px 8%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social_media{
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+}
+
+.container_footer{
+    margin: -25px 8% 10px 8%;
+}
+.contact{
+    display: flex;
+    float: right;
+    width: 235px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact_text{
+    font-size: 20px;
+}
+

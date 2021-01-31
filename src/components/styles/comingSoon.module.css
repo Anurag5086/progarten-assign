@@ -1,0 +1,74 @@
+.container{
+    margin: 0px 8% 0px 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image{
+    flex: 0.5;
+    height: 80vh;
+}
+
+.sideText{
+    flex: 0.5;
+    margin-top: 160px;
+    margin-left: 75px;
+}
+
+.topText{
+    font-size: 37px;
+    color: #e59d35;
+}
+
+.middleText{
+    margin-top: -15px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.bottomText{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+.emailField{
+    width: 300px;
+    height: 42px;
+    outline: none;
+    font-size: 14px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 19px;
+    border: 0.5px solid grey;
+}
+
+.subsButton{
+    height: 48px;
+    width: 110px;
+    background-color: #e59d35;
+    color: white;
+    letter-spacing: 1px;
+    outline: none;
+    border: 0px solid black;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+
+
+@media(max-width: 1080px){
+    .image{
+        width: 80%;
+        flex: 1;
+    }
+
+    .sideText{
+        flex: 1;
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+}
+
