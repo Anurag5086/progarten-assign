@@ -7,6 +7,17 @@ export default function ComingSoonBody(){
     const handleSubmit = (e) => {
         let emailUser = email;
         console.log(emailUser);
+        const res = fetch('http://localhost:3000/api/emailSubscribe',{
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(
+                {
+                    email: emailUser
+                }
+            )
+        });
         e.preventDefault();
         setEmail("");
     }
