@@ -10,7 +10,7 @@ export default function ComingSoonBody(){
         e.preventDefault();
         let emailUser = email;
         console.log(emailUser);
-        const res = await fetch('http://localhost:3000/api/emailSubscribe',{
+        const res = await fetch('https://progarten-assign.vercel.app/api/emailSubscribe',{
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
