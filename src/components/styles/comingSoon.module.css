@@ -59,7 +59,7 @@
 
 
 
-@media(max-width: 1380px){
+@media(max-width: 1200px){
     .image{
         width: 80%;
         flex: 1;
@@ -74,15 +74,27 @@
     }
 
     .emailField{
-        width: 200px;
-        height: 42px;
+        width: 140px;
+        height: 38px;
         outline: none;
-        font-size: 14px;
+        font-size: 12px;
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
         padding-left: 19px;
         border: 0.5px solid grey;
         margin-bottom: 50px;
+    }
+
+    .subsButton{
+        height: 43px;
+        width: 80px;
+        background-color: #e59d35;
+        color: white;
+        font-size: 10px;
+        outline: none;
+        border: 0px solid black;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
     }
 
 }
