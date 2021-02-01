@@ -1,2 +1,2 @@
-const baseUrl = process.env.NODE_ENV === 'production' ? "https://mywebsite.com": "http://localhost:3000"
+const baseUrl = process.env.NODE_ENV === 'production' ? "https://progarten-assign.herokuapp.com": "http://localhost:3000"
 export default baseUrl
