@@ -1,7 +1,5 @@
 import styles from "./styles/comingSoon.module.css"
 import {useState} from 'react'
-import Popup from './popup'
-import { redirect } from "next/dist/next-server/server/api-utils";
 
 export default function ComingSoonBody(){
     const [email,setEmail] = useState("");
