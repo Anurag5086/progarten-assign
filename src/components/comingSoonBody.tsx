@@ -23,9 +23,9 @@ export default function ComingSoonBody(){
         });
 
             if(res.status == 200){
-                setMsg("Thank your for Subscribing!")
+                setMsg("Thank you for Subscribing!")
             }else{
-                setMsg(`Error ${res.json()}`)
+                setMsg("Error Please try again!")
             }
 
             
