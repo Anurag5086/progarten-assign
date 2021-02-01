@@ -11,12 +11,12 @@ export default function EmailSubscribe(req: NextApiRequest, res: NextApiResponse
         const email = new Email({
             email: req.body.email
         }).save();
-        console.log("Its a success")
+        res.status(200).json({result: "Subscribed Succesfully!"});
     }else{
-        res.status(404).json("Email not valid");
+        res.status(404).json({result: "Email Invalid"});
     }
 }catch(e){
-    res.status(404).json("some errroro");
+    res.status(404).json({result: e});
 }
 
 }

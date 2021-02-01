@@ -1,13 +1,18 @@
 import styles from "./styles/comingSoon.module.css"
 import {useState} from 'react'
+import Popup from './popup'
+import { redirect } from "next/dist/next-server/server/api-utils";
 
 export default function ComingSoonBody(){
     const [email,setEmail] = useState("");
+    const [result1, setResult1] = useState({});
+    const [msg, setMsg] = useState("");
 
-    const handleSubmit = (e) => {
+    async function handleSubmit(e) {
+        e.preventDefault();
         let emailUser = email;
         console.log(emailUser);
-        const res = fetch('http://localhost:3000/api/emailSubscribe',{
+        const res = await fetch('http://localhost:3000/api/emailSubscribe',{
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -18,8 +23,17 @@ export default function ComingSoonBody(){
                 }
             )
         });
-        e.preventDefault();
+
+            if(res.status == 200){
+                setMsg("Thank your for Subscribing!")
+            }else{
+                setMsg(`Error ${res.json()}`)
+            }
+
+            
+       
         setEmail("");
+        
     }
     return(
         <>
@@ -34,8 +48,9 @@ export default function ComingSoonBody(){
 
                     <form onSubmit={e => {handleSubmit(e)}}>
                         <input type="email" placeholder="Email" className={styles.emailField} value={email} onChange={e => setEmail(e.target.value)} />
-                        <input type="submit" className={styles.subsButton} value="Subscribe" />
+                        <input type="submit" className={styles.subsButton} value="Subscribe"/>
                     </form>
+                    <p>{msg}</p>
                 </div>
             </div>
 
